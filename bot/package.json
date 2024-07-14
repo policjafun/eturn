@@ -1,0 +1,33 @@
+{
+  "name": "eturn",
+  "author": {
+    "name": "feenko, hiheys, eel",
+    "url": "https://eturn.fun/"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^0.44.6",
+    "@prisma/client": "5.15.0",
+    "axios": "^1.7.2",
+    "chalk": "^5.3.0",
+    "discord.js": "^14.15.3",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.5.0",
+    "@types/bun": "latest",
+    "eslint": "^8.57.0",
+    "prisma": "5.15.0",
+    "typescript": "^5.5.2",
+    "typescript-eslint": "^7.14.1"
+  },
+  "scripts": {
+    "start": "dotenvx run -- bun run src/main.ts",
+    "dev": "dotenvx run -- bun run --watch src/main.ts",
+    "watch": "dotenvx run -- bun run --watch src/main.ts",
+    "migrate": "bun x prisma migrate dev --name migrate --preview-feature",
+    "format": "bun x prettier --write src && npx eslint --fix src"
+  },
+  "module": "index.ts",
+  "type": "module"
+}
